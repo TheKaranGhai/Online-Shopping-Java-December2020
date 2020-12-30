@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,9 +16,14 @@ import javax.servlet.http.Part;
 import vmm.DBLoader;
 import vmm.FileUploader;
 
+/**
+ *
+ * @author karan
+ */
 @MultipartConfig
-public class signupresponse extends HttpServlet {
+public class signup_response extends HttpServlet {
 
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -52,7 +62,8 @@ public class signupresponse extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-
 }
+
+    
+

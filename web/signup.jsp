@@ -113,7 +113,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         }
                     };
 
-                    xhr.open("POST", "usersignupresponse", true);
+                    xhr.open("POST", "signup_response", true);
 
 
                     xhr.send(formdata);
@@ -137,12 +137,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <p>SALE UP TO 70% OFF. USE CODE "SALE70%" . <a href="products.html">SHOP NOW</a></p>
                 </div>
                 <div class="agile-login">
-                    <ul>
+                   <%
+
+                            if (session.getAttribute("username") == null) {
+                        %>
                         <li><a href="signup.jsp"> Create Account </a></li>
                         <li><a href="login.jsp">Login</a></li>
-                        <li><a href="contact.html">Help</a></li>
+                            <%
+                            } else 
+                     {
 
-                    </ul>
+                                String username = session.getAttribute("username").toString();
+                            %>
                 </div>
                 <div class="product_list_header">  
                     <form action="#" method="post" class="last"> 
